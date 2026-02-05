@@ -11,29 +11,30 @@
 </head>
 
 <body class="login">
-<section class="form-login">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <form action="">
-                    <img class="logo" src="{{asset('image/logo.png')}}" alt="">
-                    <h3>Selamat Datang di</h3>
-                    <h1>eCounsel - Skariga </h1>
-                    <p>Sistem Bimbingan Konseling Online Sekolah.</p>
-                    <label for="">Username</label><br>
-                    <input type="text" name="" id=""><br><br>
-                    <label for="">Password</label><br>
-                    <input type="password" name="" id=""><br>
-                    <ul>
-                        <li class="ingat-saya"><input type="checkbox" name="" id=""><span>Ingat saya</span></li>
-                        <li ><a href="#">Lupa Password?</a></li>
-                    </ul><br>
-                    <button type="submit">Masuk</button>
-                </form>
+    <section class="form-login">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <form action="{{ route('login.proses') }}" method="POST">
+                        @csrf
+                        <img class="logo" src="{{asset('image/logo.png')}}" alt="">
+                        <h3>Selamat Datang di</h3>
+                        <h1>eCounsel - Skariga </h1>
+                        <p>Sistem Bimbingan Konseling Online Sekolah.</p>
+                        <label for="">Username</label><br>
+                        <input type="text" name="username" id=""><br><br>
+                        <label for="">Password</label><br>
+                        <input type="password" name="password" id=""><br>
+                        <ul>
+                            <li class="ingat-saya"><input type="checkbox" name="" id=""><span>Ingat saya</span></li>
+                            <li><a href="#">Lupa Password?</a></li>
+                        </ul><br>
+                        <button type="submit">Masuk</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 </body>
 
 </html>

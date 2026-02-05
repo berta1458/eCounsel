@@ -30,7 +30,7 @@
 
     <section class="banner1">
         <div class="banner">
-            <div class="overlay">
+            <div class="b-overlay">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
