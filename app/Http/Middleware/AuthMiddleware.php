@@ -7,9 +7,10 @@ use Illuminate\Http\Request;
 
 class AuthMiddleware
 {
-    public function handle(Request $request, Closure $next)
+    public function handle($request, Closure $next)
     {
-        if (!session()->has('login')) {
+
+        if (!session('login')) {
             return redirect('/login')->with('error', 'Silakan login dulu');
         }
 

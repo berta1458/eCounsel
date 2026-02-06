@@ -10,7 +10,7 @@ use App\Models\Konselor;
 
 class AuthController extends Controller
 {
-    public function Login()
+    public function login()
     {
         return view('auth.login');
     }
@@ -27,8 +27,7 @@ class AuthController extends Controller
             session([
                 'login' => true,
                 'role' => 'siswa',
-                'user_id' => $siswa->id,
-                'nama' => $siswa->nama
+                'id_user' => $siswa->id,
             ]);
             return redirect('/siswa/dashboard');
         }
@@ -38,7 +37,7 @@ class AuthController extends Controller
             session([
                 'login' => true,
                 'role' => 'konselor',
-                'user_id' => $konselor->id,
+                'id_user' => $konselor->id,
                 'nama' => $konselor->nama
             ]);
             return redirect('/konselor/dashboard');

@@ -12,7 +12,7 @@ class SiswaSeeder extends Seeder
     {
         $userSiswa = User::where('role', 'siswa')->first();
 
-        User::create([
+        Siswa::create([
             'id_user' => $userSiswa->id,
             'nis'     => '23999',
             'nama'    => 'Berta Yuanita',
